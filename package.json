@@ -1,0 +1,14 @@
+{
+  "name": "repka-blog",
+  "version": "1.0.0",
+  "description": "A simple blog using Eleventy, GitHub Actions, and GitHub Pages",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2"
+  }
+}

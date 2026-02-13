@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<h1>Posts</h1>
+<ul class="post-list">
+  {%- for post in collections.posts %}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | readableDate }}</time>
+  </li>
+  {%- endfor %}
+</ul>

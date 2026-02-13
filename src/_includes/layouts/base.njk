@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - {{ metadata.title }}</title>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="alternate" href="{{ '/feed.xml' | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>&copy; {{ metadata.author.name }}</p>
+  </footer>
+</body>
+</html>

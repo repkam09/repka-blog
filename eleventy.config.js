@@ -25,7 +25,7 @@ export default function (eleventyConfig) {
       language: "en",
       title: "Repka Blog",
       subtitle: "A sample blog by Mark Repka",
-      base: "https://repkam09.github.io/repka-blog/",
+      base: "https://repkam09.github.io/",
       author: {
         name: "Mark Repka",
         email: "mark+blog@repkam09.com",

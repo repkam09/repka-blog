@@ -36,6 +36,7 @@ export default function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/repka-blog/",
     dir: {
       input: "src",
       output: "_site",

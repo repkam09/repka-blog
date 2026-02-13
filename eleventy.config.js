@@ -1,6 +1,8 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{jpg,png,gif,svg,webp}");
 
@@ -37,6 +39,7 @@ export default function (eleventyConfig) {
 
   return {
     pathPrefix: "/repka-blog/",
+    htmlBaseUrl: "/repka-blog/",
     dir: {
       input: "src",
       output: "_site",

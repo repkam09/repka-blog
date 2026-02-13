@@ -5,6 +5,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{jpg,png,gif,svg,webp}");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-US", {
@@ -25,7 +26,7 @@ export default function (eleventyConfig) {
       language: "en",
       title: "Repka Blog",
       subtitle: "A sample blog by Mark Repka",
-      base: "https://repkam09.github.io/",
+      base: "https://blog.repkam09.com/",
       author: {
         name: "Mark Repka",
         email: "mark+blog@repkam09.com",
@@ -38,8 +39,8 @@ export default function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/repka-blog/",
-    htmlBaseUrl: "/repka-blog/",
+    pathPrefix: "/",
+    htmlBaseUrl: "/",
     dir: {
       input: "src",
       output: "_site",

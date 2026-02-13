@@ -1,8 +1,6 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{jpg,png,gif,svg,webp}");
   eleventyConfig.addPassthroughCopy("src/CNAME");
@@ -24,7 +22,7 @@ export default function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "Repka Blog",
+      title: "Mark Repka",
       subtitle: "A sample blog by Mark Repka",
       base: "https://blog.repkam09.com/",
       author: {
@@ -39,8 +37,6 @@ export default function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/",
-    htmlBaseUrl: "/",
     dir: {
       input: "src",
       output: "_site",

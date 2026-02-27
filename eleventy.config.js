@@ -1,4 +1,5 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
@@ -12,6 +13,8 @@ export default function (eleventyConfig) {
       day: "numeric",
     });
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",

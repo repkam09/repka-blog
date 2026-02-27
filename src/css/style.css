@@ -6,7 +6,7 @@
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
@@ -36,7 +36,7 @@ article time {
 }
 
 .post-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .post-list a {

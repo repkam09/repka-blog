@@ -2,12 +2,48 @@
 layout: layouts/base.njk
 title: Home
 ---
+
+<p>
+  I'm Mark Repka, a Software Engineer based in Rochester, NY.
+</p>
 <h1>Posts</h1>
 <ul class="post-list">
   {%- for post in collections.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | readableDate }}</time>
-  </li>
+    <li class="post-list-entry">
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      <p>
+        {{ post.data.description }}
+      </p>
+      <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | readableDate }}</time>
+    </li>
   {%- endfor %}
+</ul>
+<h1>External</h1>
+<p>Here are some other external resources I've contributed to:</p>
+<ul class="post-list">
+  <li class="post-list-entry">
+    <h2>
+      <a href="https://www.bitovi.com/blog/production-ready-ai-agents-making-langchain-durable-using-temporal">
+        Production Ready AI Agents: Making LangChain Durable Using Temporal</a>
+    </h2>
+    <p>
+      Discover how to build durable, scalable AI agents using Temporal and LangChain, managing complex workflows with ease in
+      production environments.
+    </p>
+    <time datetime="2026-02-06">February 6, 2026</time>
+  </li>
+  <li class="post-list-entry">
+    <h2>
+      <a href="https://www.bitovi.com/blog/production-ready-ai-agents-making-langchain-durable-using-temporal">
+        Building Durable MCP Tools with Temporal: A Complete Guide
+      </a>
+    </h2>
+    <p>
+      Discover how to build durable, scalable AI tools using Model Context Protocol and Temporal in this comprehensive guide.
+      Learn to manage complex workflows with ease.
+    </p>
+    <time datetime="2025-10-17">October 17, 2025</time>
+  </li>
 </ul>

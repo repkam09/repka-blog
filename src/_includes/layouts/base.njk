@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - {{ metadata.title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="/css/prism-vsc-dark-plus.css" rel="stylesheet" />  
-  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="/">{{ metadata.title }}</a>
-    </nav>
-  </header>
-  <main>
-    {{ content | safe }}
-  </main>
-  <footer>
-    <p>&copy; {{ metadata.author.name }}</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - {{ metadata.title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/prism-vsc-dark-plus.css" rel="stylesheet"/>
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">{{ metadata.title }}</a>
+      </nav>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>&copy; {{ metadata.author.name }} -
+        <a href="/feed.xml">RSS</a>
+        -
+        <a href="https://repkam09.com/about">About</a>
+        -
+        <a href="https://github.com/repkam09">Projects</a>
+    </footer>
+  </body>
 </html>

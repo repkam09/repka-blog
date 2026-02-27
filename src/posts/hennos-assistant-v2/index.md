@@ -1,12 +1,7 @@
 ---
 title: Building a Personal AI Agent with Temporal Workflows
 date: 2026-02-27
-tags:
-  - ai
-  - typescript
-  - temporal
-  - llm
-  - architecture
+description: Taking my personal AI assistant to the next level with Temporal Workflows.
 ---
 
 After three years of iterative development on Hennos, my personal AI assistant project, it had become clear that the original architecture needed a major overhaul. The assistant had grown from a simple Telegram bot into a much larger multi-platform system supporting multiple LLM providers, several different chat clients, and a wide array of tools. But the original system that was designed around Telegram specifics was making it hard to seperate the core logic from the platform-specific interactions. There was a lot of duplicated logic, complex workarounds, and it was time for a fundamental rewrite.

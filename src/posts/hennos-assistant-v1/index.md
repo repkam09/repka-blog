@@ -1,6 +1,6 @@
 ---
 title: Building a Personal AI Assistant
-date: 2026-02-14
+date: 2026-02-27
 description: Building a personal AI assistant with Telegram, OpenAI, and TypeScript.
 ---
 

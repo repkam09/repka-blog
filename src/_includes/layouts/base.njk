@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="/css/prism-vsc-dark-plus.css" rel="stylesheet"/>
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="stylesheet" href="https://townsquare.cauenapier.com/widget.css" />
+    <script type="module">
+      import { mountTownSquare } from "https://townsquare.cauenapier.com/townsquare.mjs";
+
+      mountTownSquare(document.getElementById("townsquare-root"), {
+        serverOrigin: "https://townsquare.cauenapier.com",
+        siteKey: "site_CgxaXLzra0isg8Uf"
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -17,6 +26,7 @@
     <main>
       {{ content | safe }}
     </main>
+    <div id="townsquare-root"></div>
     <footer>
       <p>&copy; {{ metadata.author.name }} -
         <a href="/feed.xml">RSS</a>
